@@ -1,3 +1,4 @@
+import 'package:fitness_app/features/onboarding/assets/onboarding_images.dart';
 import 'package:fitness_app/features/onboarding/controller/onboarding_screen_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -22,7 +23,7 @@ class OnboardingBackButton extends StatelessWidget {
           child: InkWell(
             onTap: _controller.previousPage,
             child: SvgPicture.asset(
-              "assets/icons/onboarding_back_button.svg",
+              OnboardingImages.backButton,
             ),
           ),
         ),

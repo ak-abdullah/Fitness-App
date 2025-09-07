@@ -5,4 +5,5 @@ class AppTheme {
   static const Color buttonColor = Color(0xFFF34E3A);
   static const Color buttonTextColor = Color(0xFFF34E3A);
   static const Color buttonBackgroundColor = Color(0xFF140702);
+  static const Color appBackgroundColor = Color(0xFF141516);
 }

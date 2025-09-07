@@ -1,4 +1,3 @@
-import 'package:fitness_app/features/onboarding/controller/onboarding_screen_controller.dart';
 import 'package:fitness_app/core/themes.dart';
 import 'package:fitness_app/features/onboarding/models/onboarding_model.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class OnboardingPage extends StatelessWidget {
-  OnboardingPage({super.key, required this.model});
+  const OnboardingPage({super.key, required this.model});
   final OnboardingModel model;
   @override
   Widget build(BuildContext context) {

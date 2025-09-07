@@ -1,8 +1,8 @@
-import 'package:fitness_app/core/themes.dart';
 import 'package:fitness_app/features/onboarding/controller/onboarding_screen_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class OnboardingActionCard extends StatelessWidget {
@@ -28,12 +28,8 @@ class OnboardingActionCard extends StatelessWidget {
                 _controller.pages.length,
                 (index) => Container(
                   decoration: BoxDecoration(
-                    border: _controller.currentPage.value != index
-                        ? Border.all(color: Color(0xFF000000), width: 1)
-                        : null,
-                    color: _controller.currentPage.value == index
-                        ? Color(0xFFFFFFFF)
-                        : Color(0xFFFFFFFF).withValues(alpha: 0.13),
+                    border: _controller.dotsBorder(index),
+                    color: _controller.dotsColor(index),
 
                     borderRadius: BorderRadius.circular(5.r),
                   ),
@@ -53,8 +49,14 @@ class OnboardingActionCard extends StatelessWidget {
             child: SizedBox(
               height: 49,
               width: double.infinity,
-              child: Obx(
-                () => OutlinedButton(
+              child: Obx(() {
+                if (_controller.isOnboardingCompleted.value) {
+                  
+                  WidgetsBinding.instance.addPostFrameCallback((_) {
+                    context.go('/signup');
+                  });
+                }
+                return OutlinedButton(
                   style: OutlinedButton.styleFrom(
                     backgroundColor: _controller.buttonBackgroundColor,
                     side: _controller.buttonBorderSide,
@@ -65,13 +67,11 @@ class OnboardingActionCard extends StatelessWidget {
                     style: GoogleFonts.montserrat(
                       fontWeight: FontWeight.w600,
                       fontSize: 17.sp,
-                      color: _controller.isLastPage
-                          ? AppTheme.textColor
-                          : AppTheme.buttonColor,
+                      color: _controller.buttonTextColor,
                     ),
                   ),
-                ),
-              ),
+                );
+              }),
             ),
           ),
         ],

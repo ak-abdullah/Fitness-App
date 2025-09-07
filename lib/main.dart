@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:fitness_app/features/onboarding/view/onboarding_screen.dart';
+import 'package:fitness_app/core/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
@@ -21,13 +21,14 @@ class MyApp extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
-      child: MaterialApp(
+      child: MaterialApp.router(
+        routerConfig: router,
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+
+        title: 'Fitness App',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         ),
-        home: OnboardingScreen(),
       ),
     );
   }
