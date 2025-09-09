@@ -51,7 +51,6 @@ class OnboardingActionCard extends StatelessWidget {
               width: double.infinity,
               child: Obx(() {
                 if (_controller.isOnboardingCompleted.value) {
-                  
                   WidgetsBinding.instance.addPostFrameCallback((_) {
                     context.go('/signup');
                   });
