@@ -1,8 +1,10 @@
 import 'package:fitness_app/core/themes.dart';
 import 'package:fitness_app/features/auth/auth_images.dart';
+import 'package:fitness_app/features/home/view/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'custom_text_field.dart';
@@ -73,7 +75,9 @@ class AuthForm extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppTheme.buttonColor,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen(),));
+                    },
                     child: Text(
                       'Sign Up',
                       style: GoogleFonts.montserrat(
