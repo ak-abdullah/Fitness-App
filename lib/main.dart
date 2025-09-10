@@ -26,9 +26,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
 
         title: 'Fitness App',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        ),
+        theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple)),
       ),
     );
   }
