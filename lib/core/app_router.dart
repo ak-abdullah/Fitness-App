@@ -1,4 +1,4 @@
-import 'package:fitness_app/features/auth/signup.dart';
+import 'package:fitness_app/features/auth/view/signup.dart';
 import 'package:fitness_app/features/onboarding/view/onboarding_screen.dart';
 import 'package:go_router/go_router.dart';
 
