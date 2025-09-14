@@ -14,5 +14,11 @@ class AppTheme {
   static const Color loginButtonColor = Color(0xFF008DC9);
   static const Color selectionColor = Color(0xFF484848);
   static const Color selectionHandleColor = Color(0xFFF34E3A);
+  static const Color homePageTextColor = Color(0xFFDAD6D6);
+  static const Color homePageDateColor = Color(0xFF545454);
+  static const Color dotColor = Color(0xFFDDDDDD);
+  static const Color currentStatusColor = Color(0xFF080808);
+  static const Color currentStatusTextColor = Color(0xFF727272);
+  static const Color lineChartLabelColor = Color(0xFF545454);
 
 }
