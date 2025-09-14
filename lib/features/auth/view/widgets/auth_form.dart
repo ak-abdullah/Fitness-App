@@ -1,5 +1,5 @@
 import 'package:fitness_app/core/themes.dart';
-import 'package:fitness_app/features/auth/auth_images.dart';
+import 'package:fitness_app/features/auth/assets/auth_images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
