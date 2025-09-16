@@ -20,5 +20,8 @@ class AppTheme {
   static const Color currentStatusColor = Color(0xFF080808);
   static const Color currentStatusTextColor = Color(0xFF727272);
   static const Color lineChartLabelColor = Color(0xFF545454);
+  static const Color currentStatusLabelColor = Color(0xFF545454); 
+  static const Color activityColor = Color(0xFFDAD6D6); 
+  static const Color chooseProgramColor = Color(0xFF545454); 
 
 }

@@ -1,4 +1,5 @@
 import 'package:fitness_app/core/themes.dart';
+import 'package:fitness_app/features/home/view/widgets/below_line_chart_header.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -49,9 +50,7 @@ class CustomLinearChart extends StatelessWidget {
                   rightTitles: axisTitles,
                   leftTitles: axisTitles,
                   bottomTitles: AxisTitles(
-                    
                     sideTitles: SideTitles(
-                      
                       showTitles: true,
                       interval: 1,
 
@@ -95,18 +94,22 @@ class CustomLinearChart extends StatelessWidget {
               ),
             ),
           ),
-          Row(
-            children: [
-              Column(
-                children: [
-                  Text('78', style: GoogleFonts.montserrat(),),
-                  Text('BPM'),     
-                ],
-              )
-            ],
-          )
+          Padding(
+            padding: EdgeInsets.only(bottom: 14.h, left: 42.w, right: 42.w),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                
+                BelowLineChartInfo(reading: '78', label: 'BPM'),
+                BelowLineChartInfo(reading: '78', label: 'BPM'),
+                BelowLineChartInfo(reading: '78', label: 'BPM'),
+              ],
+            ),
+          ),
         ],
       ),
     );
   }
 }
+
+
