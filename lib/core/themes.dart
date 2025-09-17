@@ -23,5 +23,6 @@ class AppTheme {
   static const Color currentStatusLabelColor = Color(0xFF545454); 
   static const Color activityColor = Color(0xFFDAD6D6); 
   static const Color chooseProgramColor = Color(0xFF545454); 
+  static const Color activityHeaderTextColor = Color(0xFFE8E8E8); 
 
 }

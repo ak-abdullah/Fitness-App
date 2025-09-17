@@ -1,5 +1,8 @@
+import 'dart:ui';
+
 import 'package:fitness_app/core/themes.dart';
 import 'package:fitness_app/features/home/assets/home_images.dart';
+import 'package:fitness_app/features/home/view/widgets/activity_card.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -32,19 +35,31 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: 28.h),
             ActivityHeader(),
             SizedBox(height: 28.h),
-            // Image.asset()
-            Container(
-              height: 127.h,
-              width: double.infinity,
-              decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage(HomeImages.buildYourBody,),fit: BoxFit.cover),
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    ActivityCard(
+                      image: HomeImages.trainingForBeginner,
+                      text: "Training for\nBeginner",
+                    ),
+                    SizedBox(height: 17.h),
+                    ActivityCard(
+                      image: HomeImages.buildYourBody,
+                      text: 'Build Your\nBody',
+                    ),
+                    SizedBox(height: 17.h),
+                    ActivityCard(
+                      image: HomeImages.findMoreStyle,
+                      text: 'Find More\nStyle',
+                    ),
+                  ],
+                ),
               ),
-            )
+            ),
           ],
         ),
       ),
     );
   }
 }
-
-
